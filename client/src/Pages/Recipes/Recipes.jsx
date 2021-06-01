@@ -4,9 +4,6 @@ import './Recipes.css'
 import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import { getRecipes, getDiets } from '../../Redux/actions/recipeActions'
-import { Icon } from '@iconify/react';
-import iosBookOutline from '@iconify-icons/ion/ios-book-outline';
-import clockIcon from '@iconify-icons/et/clock';
 
 function Recipes({ recipes, diets, getRecipes }) {
 
@@ -127,11 +124,11 @@ function Recipes({ recipes, diets, getRecipes }) {
 
                         <div className="information_circle">
                             <div className="circle_data">
-                                 <span class="value_circle"><Icon icon={clockIcon}/> {el.readyInMinutes}</span>
+                                 <span class="value_circle"><span class="iconify" data-icon="et:clock" data-inline="true"></span>{el.readyInMinutes}</span>
                                  <span className="title_circle"> Mins</span>
                             </div>
                             <div className="circle_data">
-                                <span class="value_circle"><Icon icon={iosBookOutline}/> {el.servings}</span>
+                                <span class="value_circle"><span class="iconify" data-icon="ion-ios-book-outline" data-inline="false"></span>{el.servings}</span>
                                 <span className="title_circle"> Servings</span>
 
                             </div>
