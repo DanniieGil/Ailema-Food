@@ -1,0 +1,213 @@
+:root {
+  --clr-primary: #d50000;
+  --clr-primary-hover: #29e6a7;
+  --clr-primary-dark: #039d69;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+  --clr-gray300: #a7b7be;
+  --clr-gray400: #6b7e86;
+  --clr-gray500: #425a65;
+  --radius: 0.2rem;
+}
+
+/* ! GRID RECIPES */
+.cards_container_myrecipes {
+  margin: 2rem;
+  /* margin-top: 10rem; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+.card2 {
+  overflow: hidden;
+  box-shadow: 0px 2px 20px var(--clr-gray200);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  /* height: 400px; */
+}
+
+.card_image {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_title {
+  padding: 1rem;
+}
+
+.card_diets2 {
+  font-size: 12px;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  color: darkcyan;
+  font-style: oblique;
+}
+
+.card_health {
+  position: absolute;
+  padding: 5px 10px;
+  background: #fc0606;
+  font-size: 0.7rem;
+  border: none;
+  color: #e8efff;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 95px;
+  margin-top: 155px;
+  margin-left: 220px;
+  z-index: 50000;
+}
+
+.card_btn_delete {
+  padding: 0.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border: 2px solid var(--clr-primary);
+  background: transparent;
+  color: var(--clr-primary);
+  border-radius: var(--radius);
+  transition: background 200ms ease-in, color 200ms ease-in;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card_btn_delete:hover {
+  background: var(--clr-primary);
+  color: white;
+}
+
+.card_btn_update {
+  padding: 0.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border: 2px solid var(--clr-primary);
+  background: transparent;
+  color: var(--clr-primary);
+  border-radius: var(--radius);
+  transition: background 200ms ease-in, color 200ms ease-in;
+  cursor: pointer;
+}
+
+.card_btn_update:hover {
+  background: #01f32a;
+  color: black;
+  border: 2px solid rgb(172, 172, 172);
+}
+
+/* FORM FROM W3SCHOOL */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.form-popup {
+  display: none;
+  z-index: 800000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  box-shadow: 1px 1px 10px 1px darkseagreen;
+}
+
+h2 {
+  text-align: center;
+}
+.form-container {
+  background-color: white;
+  background: #8bdbbf;
+}
+
+.container_data .set .div-aux label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.container_data footer {
+  align-items: center;
+  background: #fff;
+  display: grid;
+  padding: 5px 40px;
+  background: repeat-y;
+}
+
+.form-container .header_my_Recipe {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.set {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.container_data .set button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 38px;
+  line-height: 38px;
+  width: 100px;
+  border-radius: 19px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container_data .set #subm {
+  background: #807182;
+  border: 1px solid transparent;
+  color: #fff;
+}
+
+.container_data .set #subm:hover {
+  background: #171a2b;
+}
+
+.container_data .set #cancel {
+  background: #fff;
+  transition: 0.2s all ease-in-out;
+}
+.container_data .set #cancel:hover {
+  background: #171a2b;
+  color: white;
+}
+
+input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 38px;
+  line-height: 38px;
+  margin-right: 20px;
+}
+
+.container_data .set .label {
+  color: rgba(0, 0, 0, 0.8);
+}

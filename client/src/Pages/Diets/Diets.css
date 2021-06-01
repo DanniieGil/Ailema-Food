@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.columns {
+  display: flex;
+}
+
+.content_image img {
+  margin-left: 20px;
+  width: 130%;
+}
+
+.content_diets {
+  border: 1px solid black;
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px 1px black;
+  /* display: flex;
+flex-direction: column; */
+}
+
+.diet_unit {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: all 1s;
+}
+
+.diet_title {
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  font-weight: 800;
+  padding-left:10px;
+}
+
+.diet_unit:hover {
+  transform: translateX(15px);
+  border-radius: 5px;
+  background-color: rgb(163, 161, 160);
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 1px black;
+}
+
+.diet_description {
+  padding-left:10px
+}

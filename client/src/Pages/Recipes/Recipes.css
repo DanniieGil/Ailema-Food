@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700|Work+Sans:100,200,300,400,500,600");
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+:root {
+  --clr-primary: #d50000;
+  --clr-primary-hover: #29e6a7;
+  --clr-primary-dark: #039d69;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+  --clr-gray300: #a7b7be;
+  --clr-gray400: #6b7e86;
+  --clr-gray500: #425a65;
+  --radius: 0.2rem;
+}
+
+
+/* ! GRID RECIPES */
+.cards_container_recipe {
+  margin: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 0px 2px 20px var(--clr-gray200);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  max-height: 400px;
+  
+}
+
+.card_image {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_title {
+  padding-left: 1rem;
+  width: 230px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: 'Josefin Sans';
+  font-weight: 600;
+}
+
+.card_diets {
+  font-size: 12px;
+  text-align: justify;
+  padding: 20px;
+  color: darkcyan;
+  font-style: oblique;
+  max-height: 40px;
+  margin-bottom: 20px;
+  font-family: 'Josefin Sans';
+  
+}
+
+.card_health {
+  position: absolute;
+  padding: 5px 10px;
+  background: #fc0606;
+  font-size: 0.7rem;
+  border: none;
+  color: #e8efff;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 95px;
+  margin-top: 155px;
+  margin-left: 220px;
+  z-index: 50000;
+}
+
+.card_btn {
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem;
+  border: 2px solid var(--clr-primary);
+  background: transparent;
+  color: var(--clr-primary);
+  border-radius: var(--radius);
+  transition: background 200ms ease-in, color 200ms ease-in;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card:hover .card_btn {
+  background: var(--clr-primary);
+  color: white;
+}
+
+/* ! PAGINATION */
+
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #2b2eff;
+  color: #2b2eff;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationActive a {
+  background-color: #2b2eff;
+  color: white;
+}
+
+/* SORTING  */
+
+#filter_diets,
+#filter_alphabetical {
+  display: flex;
+}
+
+/* SEARCH from w3school.com*/
+.search_bar {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  transition: width 0.4s ease-in-out;
+  margin-top: 8px;
+  color: blue;
+}
+
+.search_bar:focus {
+  width: 250px !important;
+}
+
+.radio-container_recipes {
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  padding: 5px;
+}
+
+.radio-container_recipes label {
+  background: transparent;
+  border: 1px solid rgb(192, 187, 187);
+  color: rgb(168, 166, 166);
+  border-radius: 3px;
+  display: flex;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  padding-right: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-left: 5px;
+  font-size: 13.3333px;
+}
+
+.radio-container_recipes label:hover {
+  background: #f7b1ab;
+  color: rgb(136, 60, 120);
+}
+
+.radio-container_recipes input[type="checkbox"] {
+  display: none;
+}
+
+.radio-container_recipes input[type="checkbox"]:checked + label {
+  background: #f7b1ab;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgb(136, 60, 120);
+}
+
+.radio-container_recipes input[type="radio"] {
+  display: none;
+}
+
+.radio-container_recipes input[type="radio"]:checked + label {
+  background: #f7b1ab;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn_filter {
+  border-radius: 3px;
+  height: 26px;
+  margin: 0;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  padding-left: 5px;
+  background: transparent;
+  color: rgb(168, 166, 166);
+  padding: 5px;
+  font-family: "Poppins";
+  font-size: 13.3333px;
+  border: 1px solid rgb(192, 187, 187);
+}
+
+.btn_filter:hover {
+  background: #f7b1ab;
+  color: rgb(136, 60, 120);
+}
+
+.btn_filter:focus {
+  background: #f7b1ab;
+  color: rgb(136, 60, 120);
+}
+
+.information_circle{
+  position: absolute;
+  margin-top: -250px;
+}
+
+.circle_data {
+  background: rgba(253, 253, 253, 0.8);
+  width: 60px;
+  transform: translatex(-120%);
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 10px;
+  text-align: center;
+  font-size: 0.6em;
+  opacity: 0%;
+  transform: translatex(-120%);
+  transition: transform 0.3s ease-in;
+  font-family: "Questrial";
+  
+}
+
+.circle_data .value_circle {
+  font-size: 1.9em;
+}
+
+.circle_data .title_circle {
+  font-size: 0.9em;
+}
+
+.card:hover .circle_data {
+  display: flex;
+  opacity: 100%;
+  transform: translatex(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
